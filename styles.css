@@ -1,0 +1,233 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #1a1a1a;
+  color: #33ff33;
+  margin: 20px;
+  padding: 10px;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  height: calc(60vh - 180px);
+  flex-wrap: wrap; /* Permite que los contenedores se acomoden mejor en pantallas pequeñas */
+}
+
+#input-container,
+#output-container {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  margin-bottom: 20px; /* Añadido para separar los contenedores en pantallas pequeñas */
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #33ff33;
+  padding: 10px;
+  resize: none;
+}
+
+#input-container textarea {
+  height: 100px;
+  width: 90%;
+}
+
+#output-container textarea {
+  height: 300px;
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  flex-wrap: wrap; /* Permite que los botones se acomoden mejor en pantallas pequeñas */
+}
+
+.buttons-container button {
+  background-color: #33ff33;
+  color: #000;
+  border: 2px solid #33ff33;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.buttons-container button:hover {
+  background-color: #000;
+  color: #33ff33;
+}
+
+#output-container button {
+  background-color: #33ff33;
+  color: #000;
+  border: 2px solid #33ff33;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#output-container button:hover {
+  background-color: #ffffff;
+  color: #33ff33;
+}
+
+.alert {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #000;
+  color: #ff0000;
+  padding: 10px;
+  border: 2px solid #ff0000;
+  display: none;
+  z-index: 100;
+}
+
+.alert.show {
+  display: block;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #000;
+  color: #33ff33;
+  margin: 20px;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #000;
+  color: #33ff33;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.toggle-button:hover {
+  background-color: #33ff33;
+  color: #000;
+}
+
+.dark-mode {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+.dark-mode .alert {
+  background-color: #f0f0f0;
+  color: #ff0000;
+}
+
+.dark-mode textarea {
+  background-color: #fff;
+  color: #000;
+}
+
+.dark-mode .buttons-container button {
+  background-color: #33ff33;
+  color: #000000;
+  border: 2px solid #000;
+}
+
+.dark-mode .buttons-container button:hover {
+  background-color: #f0f0f0;
+  color: rgb(0, 0, 0);
+}
+
+.dark-mode .toggle-button {
+  background-color: #000000;
+  color: #33ff33;
+}
+
+#matrix-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Estilos para la advertencia */
+.warning-message {
+  background-color: #000;
+  color: yellow;
+  border: 2px solid white;
+  border-radius: 8px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  animation: blink 1.5s infinite;
+}
+
+.warning-icon {
+  color: #ff0000; /* Color rojo para el ícono de advertencia */
+  margin-right: 10px;
+}
+
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Media Queries para hacer el diseño responsive */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    height: auto; /* Permite que la altura se ajuste automáticamente en pantallas pequeñas */
+  }
+
+  #output-container textarea {
+    width: 90%;
+    height: 200px; /* Ajuste de altura para pantallas pequeñas */
+  }
+
+  #input-container textarea {
+    width: 90%;
+  }
+}
+
+.botones-redes-sociales {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.botones-redes-sociales a {
+  margin: 0 15px;
+  color: #00FF41; /* Color inicial verde neón */
+  font-size: 30px; /* Tamaño de los iconos */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.botones-redes-sociales a:hover {
+  color: #ffffff; /* Cambia el color a blanco al pasar el ratón */
+  transform: scale(1.2); /* Agranda el icono al pasar el ratón */
+}
+
+.botones-redes-sociales a:active {
+  color: #00FF41; /* Vuelve al verde cuando se hace clic */
+}

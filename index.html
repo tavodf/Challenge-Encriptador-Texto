@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Encriptador de texto en JavaScript que convierte texto a un formato encriptado y viceversa. Ideal para aprender sobre encriptación y desencriptación de texto.">
+  <meta name="keywords" content="encriptador de texto, encriptación, desencriptación, JavaScript, programación, seguridad de datos">
+  <meta name="author" content="Tu Nombre">
+  <title>Encriptador de Texto - Herramienta de Encriptación en JavaScript</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Añadir enlace a Font Awesome para los iconos de redes sociales -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  
+  <!-- Botón de Modo Oscuro -->
+  <button class="toggle-button" onclick="toggleDarkMode()">🌙</button>
+  
+  <!-- Título en la parte superior -->
+  <header>
+    <h1>Encriptador de Texto</h1>
+  </header>
+
+  <!-- Notificación de Alerta sobre el área de entrada de texto -->
+  <div class="alert" id="alerta">¡Texto encriptado exitosamente!</div>
+
+  <main>
+    <div class="main-container">
+      <!-- Contenedor de entrada de texto -->
+      <section id="input-container">
+        
+        <!-- Mensaje de advertencia -->
+        <div class="warning-message">
+          <span class="warning-icon">⚠</span> Solo letras minúsculas y sin acentos
+        </div>
+
+        <label for="textoInput">Introduce el texto aquí:</label>
+        <textarea id="textoInput" placeholder="Introduce el texto aquí" aria-label="Área de entrada de texto"></textarea>
+        
+        <!-- Contenedor de botones ahora está dentro del contenedor de entrada -->
+        <div class="buttons-container">
+          <button onclick="encriptarTexto()">Encriptar</button>
+          <button onclick="desencriptarTexto()">Desencriptar</button>
+        </div>
+      </section>
+
+      <!-- Contenedor de salida de texto -->
+      <section id="output-container">
+        <label for="textoOutput">Encriptando Información:</label>
+        <textarea id="textoOutput" readonly aria-label="Área de salida de texto"></textarea>
+        <button onclick="copiarTexto()">Copiar al portapapeles</button> <!-- Botón dentro del textarea -->
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Gustavo De La Rosa Flórez. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Contenedor para los botones de redes sociales -->
+  <div class="botones-redes-sociales">
+    <a href="https://www.linkedin.com/in/tavodelarosaf/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/tavodf" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.instagram.com/tavodelarosaf/" target="_blank"><i class="fab fa-instagram"></i></a>
+  </div>
+
+  <!-- Añadir el canvas para la animación de Matrix -->
+  <canvas id="matrix-canvas"></canvas>
+
+  <!-- Enlace a los archivos JavaScript -->
+  <script src="script.js"></script>
+  <script src="matrix.js"></script>
+</body>
+</html>
