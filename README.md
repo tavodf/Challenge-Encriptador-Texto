@@ -41,5 +41,4 @@ Este proyecto es una aplicación web que permite a los usuarios encriptar y dese
 
 ![Encriptador de Texto](Encriptador%20de%20texto.jpg)
 
-## Licencia
-Este proyecto está bajo la Licencia MIT.
+
